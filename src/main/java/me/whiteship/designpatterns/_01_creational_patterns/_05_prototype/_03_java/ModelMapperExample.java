@@ -15,8 +15,16 @@ public class ModelMapperExample {
         githubIssue.setId(1);
         githubIssue.setTitle("1주차 과제: JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가.");
 
+        // 이렇게 담아야 할 경우 ModelMapper 사용
+		/* GithubIssueData githubIssueData = new GithubIssueData();
+		githubIssueData.setId(githubIssue.getId());
+		githubIssueData.setRepositoryName(githubIssue.getRepository().getName());*/
+        
+        // ModeMapper 리플렉션 기술로 set 메서드 명으로 바인딩 된다.
+        // ex) setRepository_Name -> x,  
         ModelMapper modelMapper = new ModelMapper();
         GithubIssueData githubIssueData = modelMapper.map(githubIssue, GithubIssueData.class);
+        System.out.println(githubIssue);
         System.out.println(githubIssueData);
     }
 }

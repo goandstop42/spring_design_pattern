@@ -66,4 +66,11 @@ public class GithubIssue implements Cloneable {
     public int hashCode() {
         return Objects.hash(id, title, repository);
     }
+
+	@Override
+	public String toString() {
+		return "GithubIssue [id=" + id + ", title=" + title + ", repository=" + repository + "]";
+	}
+    
+    
 }
