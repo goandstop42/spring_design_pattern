@@ -1,5 +1,6 @@
 package me.whiteship.designpatterns._02_structural_patterns._12_proxy._02_after;
 
+
 public class GameServiceProxy implements GameService {
 
     private GameService gameService;
@@ -7,6 +8,7 @@ public class GameServiceProxy implements GameService {
     @Override
     public void startGame() {
         long before = System.currentTimeMillis();
+        // lazy instantiation
         if (this.gameService == null) {
             this.gameService = new DefaultGameService();
         }
