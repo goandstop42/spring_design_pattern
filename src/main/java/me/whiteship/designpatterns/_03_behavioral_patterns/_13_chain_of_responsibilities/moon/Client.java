@@ -5,7 +5,7 @@ package me.whiteship.designpatterns._03_behavioral_patterns._13_chain_of_respons
  * Chain of Responsibilities
  * - 요청을 보내는 쪽과 처리하는 쪽을 분리 
  * - 요청을 보내는 쪽에서 처리하는 handler의 타입에 의존하지 않음  
- * - 디버깅이 번거로움
+ * - 디버깅이 번거로움 
  */
 public class Client {
 	
