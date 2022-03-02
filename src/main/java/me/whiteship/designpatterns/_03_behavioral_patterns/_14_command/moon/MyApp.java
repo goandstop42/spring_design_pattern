@@ -16,7 +16,7 @@ public class MyApp {
 	public static void main(String[] args) {
 		// invoker인 button 코드는 변경되지 않는다.
 		//Button button = new Button(new LightOnCommand(new Light()));
-		Button button = new Button(new GameStartCommand(new Game()));
-		button.press();
+		MyApp myApp = new MyApp(new GameStartCommand(new Game()));
+		myApp.press();
 	}
 }
