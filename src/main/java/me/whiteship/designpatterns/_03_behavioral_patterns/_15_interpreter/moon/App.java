@@ -4,7 +4,8 @@ import java.util.Map;
 
 /** Interpreter
  * - ex. 정규표현식
- *
+ * - 자주 사용하는 패턴을 재사용할 수 있음
+ * - 
  */
 public class App {
 
